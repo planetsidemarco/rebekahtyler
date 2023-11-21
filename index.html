@@ -144,18 +144,23 @@
     </div>
 
     <script>
-      // JavaScript to handle the opening and closing of the Vimeo video
       var videoContainer = document.getElementById('videoContainer');
       var closeButton = document.getElementById('closeButton');
       
       function openVimeoModal() {
-        console.log("OPEN")
         videoContainer.style.display = 'block';
+        document.addEventListener('mousedown', outsideClickHandler);
       }
     
       function closeVimeoModal(event) {
-        if (event.detail === 1) {
-          videoContainer.style.display = 'none';
+        videoContainer.style.display = 'none';
+        document.removeEventListener('mousedown', outsideClickHandler);
+      }
+    
+      function outsideClickHandler(event) {
+        // Check if the clicked element is outside the videoContainer
+        if (!videoContainer.contains(event.target)) {
+          closeVimeoModal();
         }
       }
     
