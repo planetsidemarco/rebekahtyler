@@ -21,33 +21,22 @@
       type="text/javascript"></script>
     <link rel="icon" href="media/fav1.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/grid.css">
     <!-- <link rel="stylesheet" href="css/fade.css"> -->
-    <!-- <link rel="stylesheet" href="css/nav.css"> -->
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
   </head>
   <style>
-    /* Media query for smaller screens */
-    @media screen and (max-width: 600px) {
-      .relativeImage {
-        position: static;
-        width: 80%;
-        margin-bottom: 10px;
-      }
-    }
-
     /* Container for the images */
     #imageContainer {
       position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: auto;
+      width: 130%;
       cursor: pointer;
     }
 
     /* Style for the images */
     .relativeImage {
       position: absolute;
-      height: auto;
     }
 
     /* Individual styling for each image */
@@ -76,8 +65,9 @@
     }
 
     #videoContainer {
+      margin-top: 26%;
+      margin-left: 5%;
       position: absolute;
-      top: 190px;
       display: none;
       padding: 10px;
       background-color: #f2f2f2; /* Grey background */
@@ -98,131 +88,98 @@
       cursor: pointer;
     }
 
-    /* Media bar styles */
-    #mediaBar {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translateX(150%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      z-index: 1000; /* Ensure the mediaBar is on top of other elements */
-      overflow-x: auto; /* Add overflow-x property to enable horizontal scrolling on smaller screens */
+    iframe {
+      height: 50vh;
+      width: 50vw;
     }
-
-    /* Logo styles */
-    .mediaBarLogo {
-      width: 35px; /* Adjust the width as needed */
-      margin-left: 10px; /* Adjust the margin as needed */
-    }
-
-    /* Logo styles */
-    .mediaBarLogo:hover {
-      filter: brightness(120%);
-    }
-
-    /* Media query for smaller screens */
-    @media screen and (max-width: 800px) {
-      #mediaBar {
-        transform: translateX(40%);
-      }
-    }
-
-    /* Media bar styles */
-    #navbar {
-      position: fixed;
-      right: 29%;
-      top: 15%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-      z-index: 1000; /* Ensure the mediaBar is on top of other elements */
-      overflow-x: auto; /* Add overflow-x property to enable horizontal scrolling on smaller screens */
-    }
-
-    /* Logo styles */
-    .navBarLogo {
-      width: 150px; /* Adjust the width as needed */
-      margin-left: 10px; /* Adjust the margin as needed */
-      margin-bottom: 0px;
-    }
-
-    /* Logo styles */
-    .navBarLogo:hover {
-      filter: brightness(120%);
-    }
-
+    
   </style>
 
   <body>
-    <!-- Media bar with logos -->
-    <div id="mediaBar">
-      <a href="https://www.facebook.com/profile.php?id=100031026657255"
-        target="_blank">
-        <img src="media/facebook.png" alt="Logo 1" class="mediaBarLogo">
-      </a>
-      <a href="https://twitter.com/RebekahTyler"
-        target="_blank">
-        <img src="media/twitter.png" alt="Logo 2" class="mediaBarLogo">
-      </a>
-      <a href="https://www.instagram.com/rebekah_tyler_author/?hl=en"
-        target="_blank">
-        <img src="media/instagram.png" alt="Logo 3" class="mediaBarLogo">
-      </a>
-    </div>
-
-    <!-- Navbar with logos -->
-    <div id="navbar">
-      <a href="#">
-        <img src="media/homeHeading.png" alt="Logo 1" class="navBarLogo">
-      </a>
-      <a href="#">
-        <img src="media/bioHeading.png" alt="Logo 2" class="navBarLogo">
-      </a>
-      <a href="#">
-        <img src="media/bookHeading.png" alt="Logo 3" class="navBarLogo">
-      </a>
-      <a href="#">
-        <img src="media/blogHeading.png" alt="Logo 4" class="navBarLogo">
-      </a>
-      <a href="#">
-        <img src="media/contactHeading.png" alt="Logo 5" class="navBarLogo">
-      </a>
-      <a href="#">
-        <img src="media/shopHeading.png" alt="Logo 6" class="navBarLogo">
-      </a>
-    </div>
 
     <!-- CONTENT -->
     <div>
       <div class="scroll-box">
-        <div class="content-div">
-          <div id="imageContainer">
-            <img class="relativeImage" id="titleName" src="media/logo.png">
-            <img class="relativeImage" id="tvAntenna" src="media/tv-antenna.png">
-            <img class="relativeImage" id="tvThumbnail"
-              src="media/widescreen-tv-rebekah.png" alt="Click to play"
-              onclick="openVimeoModal()" />
+        <div class="wrapper">
+          <div class="media-section">
+            <div id="mediaBar">
 
-            <div id="videoContainer">
-              <span id="closeButton" onclick="closeVimeoModal()">&times;</span>
-              <iframe
-                src="https://player.vimeo.com/video/73664039?h=272977b605"
-                width="640"
-                height="360"
-                frameborder="1"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+              <a href="https://www.facebook.com/profile.php?id=100031026657255"
+                target="_blank">
+                <img src="media/facebook.png" alt="Logo 1" class="mediaBarLogo">
+              </a>
+              <a href="https://twitter.com/RebekahTyler"
+                target="_blank">
+                <img src="media/twitter.png" alt="Logo 2" class="mediaBarLogo">
+              </a>
+              <a href="https://www.instagram.com/rebekah_tyler_author"
+                target="_blank">
+                <img src="media/instagram.png" alt="Logo 3" class="mediaBarLogo">
+              </a>
             </div>
           </div>
+
+          <div class="nav-section">
+            <div id="navbar">
+              <a href="index.html">
+                <img src="media/homeHeading.png"
+                  onmouseover="this.src='media/homeHeadingYellow.png';"
+                  onmouseout="this.src='media/homeHeading.png';" alt="Logo 1"
+                  class="navBarLogo">
+              </a>
+              <a href="#">
+                <img src="media/bioHeading.png"
+                  onmouseover="this.src='media/bioHeadingYellow.png';"
+                  onmouseout="this.src='media/bioHeading.png';" alt="Logo 2"
+                  class="navBarLogo">
+              </a>
+              <a href="#">
+                <img src="media/bookHeading.png"
+                  onmouseover="this.src='media/bookHeadingYellow.png';"
+                  onmouseout="this.src='media/bookHeading.png';" alt="Logo 3"
+                  class="navBarLogo">
+              </a>
+              <a href="#">
+                <img src="media/blogHeading.png"
+                  onmouseover="this.src='media/blogHeadingYellow.png';"
+                  onmouseout="this.src='media/blogHeading.png';" alt="Logo 4"
+                  class="navBarLogo">
+              </a>
+              <a href="#">
+                <img src="media/contactHeading.png"
+                  onmouseover="this.src='media/contactHeadingYellow.png';"
+                  onmouseout="this.src='media/contactHeading.png';" alt="Logo 5"
+                  class="navBarLogo">
+              </a>
+            </div>
+          </div>
+
+          <div class="tv-section">
+            <div id="imageContainer">
+              <img class="relativeImage" id="titleName" src="media/logo.png">
+              <img class="relativeImage" id="tvAntenna"
+                src="media/tv-antenna.png">
+              <img class="relativeImage" id="tvThumbnail"
+                src="media/widescreen-tv-rebekah.png" alt="Click to play"
+                onclick="openVimeoModal()" />
+
+              <div id="videoContainer">
+                <span id="closeButton" onclick="closeVimeoModal()">&times;</span>
+                <iframe
+                  src="https://player.vimeo.com/video/73664039?h=272977b605"
+                  frameborder="1"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="padding-section"></div>
         </div>
 
         <!-- FOOTER -->
-        <div class="footer-div">
+        <div class="footer">
 
           <a href="https://planetsidemarco.github.io/rebekahtyler/"
             class="footer-text"><div>&copy 2023 Rebekah Tyler. All Rights
@@ -234,6 +191,7 @@
     <script>
       var videoContainer = document.getElementById('videoContainer');
       var closeButton = document.getElementById('closeButton');
+      const videos = document.querySelectorAll('iframe')
       
       function openVimeoModal() {
         videoContainer.style.display = 'block';
@@ -243,6 +201,11 @@
       function closeVimeoModal(event) {
         videoContainer.style.display = 'none';
         document.removeEventListener('mousedown', outsideClickHandler);
+        videos.forEach(i => {
+          const source = i.src
+          i.src = ''
+          i.src = source
+        })
       }
     
       function outsideClickHandler(event) {

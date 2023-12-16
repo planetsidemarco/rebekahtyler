@@ -19,10 +19,8 @@ body {
 }
 
 .content-div {
-  min-height: 83.5vh;
   position: relative;
   top: 0;
-  left: 0;
 }
 
 a.hover-text:hover {
