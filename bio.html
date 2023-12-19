@@ -10,6 +10,8 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn'
+      rel='stylesheet'>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -27,76 +29,13 @@
     <link rel="stylesheet" href="css/footer.css">
   </head>
   <style>
-    /* Container for the images */
-    #imageContainer {
-      position: relative;
-      width: 130%;
-      cursor: pointer;
+    .bio {
+      font-family: 'Vollkorn'; 
+      font-size: 14px;
     }
-
-    /* Style for the images */
-    .relativeImage {
-      position: absolute;
-    }
-
-    /* Individual styling for each image */
-    #titleName {
-      margin-top: 10%;
-      margin-left: 5%;
-      width: 50%;
-      left: 2%;
-      cursor: default;
-    }
-
-    #tvAntenna {
-      margin-top: 5%;
-      margin-left: 5%;
-      width: 40%;
-      left: 26%;
-      cursor: default;
-    }
-
-    #tvThumbnail {
-      margin-top: 26%;
-      margin-left: 5%;
-      width: 70%;
-      left: 0%;
-      cursor: pointer;
-    }
-
-    #videoContainer {
-      margin-top: 26%;
-      margin-left: 5%;
-      position: absolute;
-      display: none;
-      padding: 10px;
-      background-color: #f2f2f2; /* Grey background */
-      border: 1px solid #ccc; /* Grey border */
-    }
-
-    /* Style for the close button */
-    #closeButton {
-      position: absolute;
-      padding-left: 7px;
-      padding-right: 7px;
-      top: -1px;
-      right: -33px;
-      font-size: 25px;
-      color: #ff0000; /* Dark grey color */
-      background:#f2f2f2;
-      border: 1px solid #ccc; /* Grey border */
-      cursor: pointer;
-    }
-
-    iframe {
-      height: 50vh;
-      width: 50vw;
-    }
-    
   </style>
 
   <body>
-
     <!-- CONTENT -->
     <div>
       <div class="scroll-box">
@@ -154,28 +93,64 @@
             </div>
           </div>
 
-          <div class="tv-section">
-            <div id="imageContainer">
-              <img class="relativeImage" id="titleName" src="media/logo.png">
-              <img class="relativeImage" id="tvAntenna"
-                src="media/tv-antenna.png">
-              <img class="relativeImage" id="tvThumbnail"
-                src="media/widescreen-tv-rebekah.png" alt="Click to play"
-                onclick="openVimeoModal()" />
+          <div class="body-section">
+            <div>
+              <img src="media/bioTitle.png">
+            </div>
 
-              <div id="videoContainer">
-                <span id="closeButton" onclick="closeVimeoModal()">&times;</span>
-                <iframe
-                  src="https://player.vimeo.com/video/73664039?h=272977b605"
-                  frameborder="1"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
+            <div>
+              <img src="media/Rebekah_Tyler.png"
+                style="float: left; margin: 5px;">
+            </div>
+
+            <div class="bio">
+              <p>
+                When I was 4 years old my mother died and my grandmother was
+                left
+                to raise me.
+              </p>
+              <p>
+                After leaving school I had many lives. By seventeen I had saved
+                enough money from babysitting jobs to buy an airline ticket to
+                fly
+                to London to train as a chef.
+              </p>
+              <p>
+                Five years later and yearning for change I became an
+                international
+                air hostess, which gave me a love of foreign places and peoples.
+              </p>
+              <p>
+                The birth of my first son Marco put an end to my flying career,
+                so
+                I began an English and Film & Media degree at university. A few
+                years later I completed a diploma of teaching, during which time
+                my second son Jack was born.
+              </p>
+              <p>
+                I began to teach at local primary schools until the death of my
+                beloved grandmother, which plunged me into a pit of despair.
+                Already struggling with raising my two sons as a single mother,
+                I had reached breaking point. I knew things had to change.
+              </p>
+              <p>
+                So I sold my house, quit my job and took my two sons, aged 2 and
+                10, on an eight-month adventure around the world, travelling to
+                Canada, England, France, Spain, Italy and Vietnam.
+              </p>
+              <p>
+                I returned 8 months later and began writing my first book, Full
+                Tilt, an inspirational story about the search for happiness and
+                not letting adversity stop you from living your dream.
+              </p>
+              <p>
+                I currently live in Devonport, Auckland, in a beautiful old
+                villa, from where I write and run a small holiday house,
+                Cheltenham
+                Beach Cottage, metres from Cheltenham Beach.
+              </p>
             </div>
           </div>
-
-          <div class="padding-section"></div>
         </div>
 
         <!-- FOOTER -->
@@ -187,36 +162,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      var videoContainer = document.getElementById('videoContainer');
-      var closeButton = document.getElementById('closeButton');
-      const videos = document.querySelectorAll('iframe')
-      
-      function openVimeoModal() {
-        videoContainer.style.display = 'block';
-        document.addEventListener('mousedown', outsideClickHandler);
-      }
-    
-      function closeVimeoModal(event) {
-        videoContainer.style.display = 'none';
-        document.removeEventListener('mousedown', outsideClickHandler);
-        videos.forEach(i => {
-          const source = i.src
-          i.src = ''
-          i.src = source
-        })
-      }
-    
-      function outsideClickHandler(event) {
-        // Check if the clicked element is outside the videoContainer
-        if (!videoContainer.contains(event.target)) {
-          closeVimeoModal();
-        }
-      }
-    
-      closeButton.addEventListener('mousedown', closeVimeoModal);
-    </script>
-
   </body>
 </html>
