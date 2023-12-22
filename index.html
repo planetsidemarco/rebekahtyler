@@ -1,220 +1,191 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Home - Rebekah Tyler</title>
-    <meta property="og:image" content="media/fav1.png">
-    <meta charset="utf-8" content="width=device-width, initial-scale=1"
-      name="viewport" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous">
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700'
-      rel='stylesheet' type='text/css'>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-      type="text/javascript"></script>
-    <link rel="icon" href="media/fav1.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/grid.css">
-    <!-- <link rel="stylesheet" href="css/fade.css"> -->
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/footer.css">
-  </head>
-  <style>
-    /* Container for the images */
-    #imageContainer {
-      position: relative;
-      width: 130%;
-      cursor: pointer;
-    }
 
-    /* Style for the images */
-    .relativeImage {
-      position: absolute;
-    }
+<head>
+  <title>Home - Rebekah Tyler</title>
+  <meta property="og:image" content="media/fav1.png">
+  <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <link rel="icon" href="media/fav1.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <!-- <link rel="stylesheet" href="css/fade.css"> -->
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<style>
+  /* Container for the images */
+  #imageContainer {
+    position: relative;
+    width: 130%;
+    cursor: pointer;
+  }
 
-    /* Individual styling for each image */
-    #titleName {
-      margin-top: 10%;
-      margin-left: 5%;
-      width: 50%;
-      left: 2%;
-      cursor: default;
-    }
+  /* Style for the images */
+  .relativeImage {
+    position: absolute;
+  }
 
-    #tvAntenna {
-      margin-top: 5%;
-      margin-left: 5%;
-      width: 40%;
-      left: 26%;
-      cursor: default;
-    }
+  /* Individual styling for each image */
+  #titleName {
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 50%;
+    left: 2%;
+    cursor: default;
+  }
 
-    #tvThumbnail {
-      margin-top: 26%;
-      margin-left: 5%;
-      width: 70%;
-      left: 0%;
-      cursor: pointer;
-    }
+  #tvAntenna {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 40%;
+    left: 26%;
+    cursor: default;
+  }
 
-    #videoContainer {
-      margin-top: 26%;
-      margin-left: 5%;
-      position: absolute;
-      display: none;
-      padding: 10px;
-      background-color: #f2f2f2; /* Grey background */
-      border: 1px solid #ccc; /* Grey border */
-    }
+  #tvThumbnail {
+    margin-top: 26%;
+    margin-left: 5%;
+    width: 70%;
+    left: 0%;
+    cursor: pointer;
+  }
 
-    /* Style for the close button */
-    #closeButton {
-      position: absolute;
-      padding-left: 7px;
-      padding-right: 7px;
-      top: -1px;
-      right: -33px;
-      font-size: 25px;
-      color: #ff0000; /* Dark grey color */
-      background:#f2f2f2;
-      border: 1px solid #ccc; /* Grey border */
-      cursor: pointer;
-    }
+  #videoContainer {
+    margin-top: 26%;
+    margin-left: 5%;
+    position: absolute;
+    display: none;
+    padding: 10px;
+    background-color: #f2f2f2;
+    /* Grey background */
+    border: 1px solid #ccc;
+    /* Grey border */
+  }
 
-    iframe {
-      height: 50vh;
-      width: 50vw;
-    }
-    
-  </style>
+  /* Style for the close button */
+  #closeButton {
+    position: absolute;
+    padding-left: 7px;
+    padding-right: 7px;
+    top: -1px;
+    right: -33px;
+    font-size: 25px;
+    color: #ff0000;
+    /* Dark grey color */
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    /* Grey border */
+    cursor: pointer;
+  }
 
-  <body>
+  iframe {
+    height: 50vh;
+    width: 50vw;
+  }
+</style>
 
-    <!-- CONTENT -->
-    <div>
-      <div class="scroll-box">
-        <div class="wrapper">
-          <div class="media-section">
-            <div id="mediaBar">
+<body>
 
-              <a href="https://www.facebook.com/profile.php?id=100031026657255"
-                target="_blank">
-                <img src="media/facebook.png" alt="Logo 1" class="mediaBarLogo">
-              </a>
-              <a href="https://twitter.com/RebekahTyler"
-                target="_blank">
-                <img src="media/twitter.png" alt="Logo 2" class="mediaBarLogo">
-              </a>
-              <a href="https://www.instagram.com/rebekah_tyler_author"
-                target="_blank">
-                <img src="media/instagram.png" alt="Logo 3" class="mediaBarLogo">
-              </a>
-            </div>
-          </div>
+  <!-- CONTENT -->
+  <div class="scroll-box">
+    <div class="wrapper">
+      <div class="media-section">
+        <div id="mediaBar">
 
-          <div class="nav-section">
-            <div id="navbar">
-              <a href="https://planetsidemarco.github.io/rebekahtyler/">
-                <img src="media/homeHeading.png"
-                  onmouseover="this.src='media/homeHeadingYellow.png';"
-                  onmouseout="this.src='media/homeHeading.png';" alt="Logo 1"
-                  class="navBarLogo">
-              </a>
-              <a href="https://planetsidemarco.github.io/rebekahtyler/bio">
-                <img src="media/bioHeading.png"
-                  onmouseover="this.src='media/bioHeadingYellow.png';"
-                  onmouseout="this.src='media/bioHeading.png';" alt="Logo 2"
-                  class="navBarLogo">
-              </a>
-              <a href="#">
-                <img src="media/bookHeading.png"
-                  onmouseover="this.src='media/bookHeadingYellow.png';"
-                  onmouseout="this.src='media/bookHeading.png';" alt="Logo 3"
-                  class="navBarLogo">
-              </a>
-              <a href="#">
-                <img src="media/blogHeading.png"
-                  onmouseover="this.src='media/blogHeadingYellow.png';"
-                  onmouseout="this.src='media/blogHeading.png';" alt="Logo 4"
-                  class="navBarLogo">
-              </a>
-              <a href="#">
-                <img src="media/contactHeading.png"
-                  onmouseover="this.src='media/contactHeadingYellow.png';"
-                  onmouseout="this.src='media/contactHeading.png';" alt="Logo 5"
-                  class="navBarLogo">
-              </a>
-            </div>
-          </div>
-
-          <div class="body-section">
-            <div id="imageContainer">
-              <img class="relativeImage" id="titleName" src="media/logo.png">
-              <img class="relativeImage" id="tvAntenna"
-                src="media/tv-antenna.png">
-              <img class="relativeImage" id="tvThumbnail"
-                src="media/widescreen-tv-rebekah.png" alt="Click to play"
-                onclick="openVimeoModal()" />
-
-              <div id="videoContainer">
-                <span id="closeButton" onclick="closeVimeoModal()">&times;</span>
-                <iframe
-                  src="https://player.vimeo.com/video/73664039?h=272977b605"
-                  frameborder="1"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-          </div>
+          <a href="https://www.facebook.com/profile.php?id=100031026657255" target="_blank">
+            <img src="media/facebook.png" alt="Logo 1" class="mediaBarLogo">
+          </a>
+          <a href="https://www.instagram.com/rebekah_tyler_author" target="_blank">
+            <img src="media/instagram.png" alt="Logo 2" class="mediaBarLogo">
+          </a>
         </div>
+      </div>
 
-        <!-- FOOTER -->
-        <div class="footer">
+      <div class="nav-section">
+        <div id="navbar">
+          <a href="https://planetsidemarco.github.io/rebekahtyler/">
+            <img src="media/homeHeading.png" onmouseover="this.src='media/homeHeadingYellow.png';"
+              onmouseout="this.src='media/homeHeading.png';" alt="Logo 1" class="navBarLogo">
+          </a>
+          <a href="https://planetsidemarco.github.io/rebekahtyler/bio">
+            <img src="media/bioHeading.png" onmouseover="this.src='media/bioHeadingYellow.png';"
+              onmouseout="this.src='media/bioHeading.png';" alt="Logo 2" class="navBarLogo">
+          </a>
+          <a href="#">
+            <img src="media/bookHeading.png" onmouseover="this.src='media/bookHeadingYellow.png';"
+              onmouseout="this.src='media/bookHeading.png';" alt="Logo 3" class="navBarLogo">
+          </a>
+          <a href="#">
+            <img src="media/contactHeading.png" onmouseover="this.src='media/contactHeadingYellow.png';"
+              onmouseout="this.src='media/contactHeading.png';" alt="Logo 4" class="navBarLogo">
+          </a>
+        </div>
+      </div>
 
-          <a href="https://planetsidemarco.github.io/rebekahtyler/"
-            class="footer-text"><div>&copy 2023 Rebekah Tyler. All Rights
-              Reserved.</div></a>
+      <div class="body-section">
+        <div id="imageContainer">
+          <img class="relativeImage" id="titleName" src="media/logo.png">
+          <img class="relativeImage" id="tvAntenna" src="media/tv-antenna.png">
+          <img class="relativeImage" id="tvThumbnail" src="media/widescreen-tv-rebekah.png" alt="Click to play"
+            onclick="openVimeoModal()" />
+
+          <div id="videoContainer">
+            <span id="closeButton" onclick="closeVimeoModal()">&times;</span>
+            <iframe src="https://player.vimeo.com/video/73664039?h=272977b605" frameborder="1"
+              allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+            </iframe>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script>
-      var videoContainer = document.getElementById('videoContainer');
-      var closeButton = document.getElementById('closeButton');
-      const videos = document.querySelectorAll('iframe')
-      
-      function openVimeoModal() {
-        videoContainer.style.display = 'block';
-        document.addEventListener('mousedown', outsideClickHandler);
-      }
-    
-      function closeVimeoModal(event) {
-        videoContainer.style.display = 'none';
-        document.removeEventListener('mousedown', outsideClickHandler);
-        videos.forEach(i => {
-          const source = i.src
-          i.src = ''
-          i.src = source
-        })
-      }
-    
-      function outsideClickHandler(event) {
-        // Check if the clicked element is outside the videoContainer
-        if (!videoContainer.contains(event.target)) {
-          closeVimeoModal();
-        }
-      }
-    
-      closeButton.addEventListener('mousedown', closeVimeoModal);
-    </script>
+  <!-- FOOTER -->
+  <div class="footer">
 
-  </body>
+    <a href="https://planetsidemarco.github.io/rebekahtyler/" class="footer-text">
+      <div>&copy 2023 Rebekah Tyler. All Rights
+        Reserved.</div>
+    </a>
+  </div>
+
+  <script>
+    var videoContainer = document.getElementById('videoContainer');
+    var closeButton = document.getElementById('closeButton');
+    const videos = document.querySelectorAll('iframe')
+
+    function openVimeoModal() {
+      videoContainer.style.display = 'block';
+      document.addEventListener('mousedown', outsideClickHandler);
+    }
+
+    function closeVimeoModal(event) {
+      videoContainer.style.display = 'none';
+      document.removeEventListener('mousedown', outsideClickHandler);
+      videos.forEach(i => {
+        const source = i.src
+        i.src = ''
+        i.src = source
+      })
+    }
+
+    function outsideClickHandler(event) {
+      // Check if the clicked element is outside the videoContainer
+      if (!videoContainer.contains(event.target)) {
+        closeVimeoModal();
+      }
+    }
+
+    closeButton.addEventListener('mousedown', closeVimeoModal);
+  </script>
+
+</body>
+
 </html>
